@@ -1,9 +1,8 @@
-SHOSHO BANNERS — PASSWORDLESS DASHBOARD (interim build)
-
-1. In Supabase Authentication > Users, ensure your email is an existing confirmed user.
-2. In Authentication > URL Configuration, add the final HTTPS GitHub Pages URL to Redirect URLs.
-3. Publish index.html, config.js, icon.svg, manifest.webmanifest, sw.js to GitHub Pages.
-4. Open the published site, enter your email, follow the sign-in link. The browser will retain your session.
-5. This ZIP currently contains the PRIVATE DASHBOARD only. It does NOT yet include the public customer ordering page or image uploads. Do not expose the dashboard without authentication.
-6. The new banner SQL tables are separate from Charge Log. Do not run schema.sql again if tables already exist.
-7. Export CSV backups regularly.
+SHOSHO BANNERS CUSTOMER UPDATE
+1. In Supabase SQL Editor run customer_update.sql after replacing the owner email placeholder with the email used for the Banners manager.
+2. Upload all website files to the ROOT of the GitHub Banners repository, replacing older files.
+3. Hard-refresh Safari; check the customer form and the manager Incoming tab.
+4. Do not publicly launch until testing anonymous submission, authenticated review, storage, and privacy.
+5. Postage is NOT calculated automatically; confirm the Royal Mail quote manually.
+6. Customer submissions are requests, not paid or confirmed orders.
+7. Public image upload can be abused; Supabase storage limits are set to 5 MB and image MIME types. For production, add rate limiting/CAPTCHA through a server-side submission endpoint.
